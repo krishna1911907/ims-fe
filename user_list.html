@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>
+            Users
+        </title>
+        <script>
+            fetch("http://127.0.0.1:8000/users").then((data)=>data.json()).then((f_data)=>{
+                const ulTag=document.getElementById("UL")
+                for(let i=0;i<f_data.length;i++){
+                             ulTag.innerHTML+="<li>" + f_data[i].name + "</li>"
+
+                }
+            })
+        </script>
+    </head>
+    <body>
+        <p>
+            Hello! Here is Some details of Player.
+            
+        </p>
+        <ul id="UL">
+
+        </ul>
+        
+    </body>
+</html>
